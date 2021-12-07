@@ -1,0 +1,652 @@
+2021-12-07 14:30:51 [127.0.0.1][-][8svok9jghaqhp6u83sfjlf22a70kkbt3][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The table does not exist: {{%user}} in E:\OpenServer\domains\arm\vendor\yiisoft\yii2\db\ActiveRecord.php:438
+Stack trace:
+#0 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#1 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames()
+#2 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition()
+#3 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition()
+#4 E:\OpenServer\domains\arm\common\models\User.php(85): yii\db\BaseActiveRecord::findOne()
+#5 E:\OpenServer\domains\arm\common\models\LoginForm.php(73): common\models\User::findByUsername()
+#6 E:\OpenServer\domains\arm\common\models\LoginForm.php(44): common\models\LoginForm->getUser()
+#7 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword()
+#8 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute()
+#9 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes()
+#10 E:\OpenServer\domains\arm\common\models\LoginForm.php(58): yii\base\Model->validate()
+#11 E:\OpenServer\domains\arm\backend\controllers\SiteController.php(79): common\models\LoginForm->login()
+#12 [internal function]: backend\controllers\SiteController->actionLogin()
+#13 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#14 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams()
+#15 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction()
+#16 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction()
+#17 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest()
+#18 E:\OpenServer\domains\arm\backend\web\index.php(17): yii\base\Application->run()
+#19 {main}
+2021-12-07 14:30:48 [127.0.0.1][-][8svok9jghaqhp6u83sfjlf22a70kkbt3][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => '9tT5-cMAimqENlevhwz6SbVt1x0aNDm70aOzk4WhaIaUnNSo92bhD-Z5JObTdYkhzDSFaFVlb-v84uu-sfI91A=='
+    'LoginForm' => [
+        'username' => 'admin1'
+        'password' => 'admin1'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '8svok9jghaqhp6u83sfjlf22a70kkbt3'
+    '_csrf-backend' => 'b7e3b0249fabfb7d906705a54a7985f1856e86663dda9458ac83904ff9d589eaa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"bH-Q4fkebOsITyshyYRuOQVP-AX-4SUR\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://arm.admin.loc/'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'arm.admin.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '238'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://arm.admin.loc'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://arm.admin.loc/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uz;q=0.6'
+    'HTTP_COOKIE' => 'advanced-backend=8svok9jghaqhp6u83sfjlf22a70kkbt3; _csrf-backend=b7e3b0249fabfb7d906705a54a7985f1856e86663dda9458ac83904ff9d589eaa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22bH-Q4fkebOsITyshyYRuOQVP-AX-4SUR%22%3B%7D'
+    'PATH' => 'e:\\openserver\\modules\\php\\PHP_8.0\\ext;e:\\openserver\\modules\\php\\PHP_8.0\\pear;e:\\openserver\\modules\\php\\PHP_8.0\\pear\\bin;e:\\openserver\\modules\\php\\PHP_8.0;e:\\openserver\\modules\\wget\\bin;e:\\openserver\\modules\\database\\MySQL-8.0-Win10\\bin;e:\\openserver\\modules\\http\\Apache_2.4-PHP_8.0\\bin;e:\\openserver\\modules\\http\\Apache_2.4-PHP_8.0;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'arm.admin.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/OpenServer/domains/arm/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/OpenServer/domains/arm/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'E:/OpenServer/domains/arm/backend/web/index.php'
+    'REMOTE_PORT' => '51019'
+    'REDIRECT_URL' => '/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1638876648.744
+    'REQUEST_TIME' => 1638876648
+]
+2021-12-07 14:30:59 [127.0.0.1][-][8svok9jghaqhp6u83sfjlf22a70kkbt3][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The table does not exist: {{%user}} in E:\OpenServer\domains\arm\vendor\yiisoft\yii2\db\ActiveRecord.php:438
+Stack trace:
+#0 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#1 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames()
+#2 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition()
+#3 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition()
+#4 E:\OpenServer\domains\arm\common\models\User.php(85): yii\db\BaseActiveRecord::findOne()
+#5 E:\OpenServer\domains\arm\common\models\LoginForm.php(73): common\models\User::findByUsername()
+#6 E:\OpenServer\domains\arm\common\models\LoginForm.php(44): common\models\LoginForm->getUser()
+#7 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword()
+#8 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute()
+#9 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes()
+#10 E:\OpenServer\domains\arm\common\models\LoginForm.php(58): yii\base\Model->validate()
+#11 E:\OpenServer\domains\arm\backend\controllers\SiteController.php(79): common\models\LoginForm->login()
+#12 [internal function]: backend\controllers\SiteController->actionLogin()
+#13 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#14 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams()
+#15 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction()
+#16 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction()
+#17 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest()
+#18 E:\OpenServer\domains\arm\backend\web\index.php(17): yii\base\Application->run()
+#19 {main}
+2021-12-07 14:30:56 [127.0.0.1][-][8svok9jghaqhp6u83sfjlf22a70kkbt3][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-backend' => '9tT5-cMAimqENlevhwz6SbVt1x0aNDm70aOzk4WhaIaUnNSo92bhD-Z5JObTdYkhzDSFaFVlb-v84uu-sfI91A=='
+    'LoginForm' => [
+        'username' => 'admin1'
+        'password' => 'admin1'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '8svok9jghaqhp6u83sfjlf22a70kkbt3'
+    '_csrf-backend' => 'b7e3b0249fabfb7d906705a54a7985f1856e86663dda9458ac83904ff9d589eaa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"bH-Q4fkebOsITyshyYRuOQVP-AX-4SUR\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://arm.admin.loc/'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'arm.admin.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '238'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://arm.admin.loc'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://arm.admin.loc/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uz;q=0.6'
+    'HTTP_COOKIE' => 'advanced-backend=8svok9jghaqhp6u83sfjlf22a70kkbt3; _csrf-backend=b7e3b0249fabfb7d906705a54a7985f1856e86663dda9458ac83904ff9d589eaa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22bH-Q4fkebOsITyshyYRuOQVP-AX-4SUR%22%3B%7D'
+    'PATH' => 'e:\\openserver\\modules\\php\\PHP_8.0\\ext;e:\\openserver\\modules\\php\\PHP_8.0\\pear;e:\\openserver\\modules\\php\\PHP_8.0\\pear\\bin;e:\\openserver\\modules\\php\\PHP_8.0;e:\\openserver\\modules\\wget\\bin;e:\\openserver\\modules\\database\\MySQL-8.0-Win10\\bin;e:\\openserver\\modules\\http\\Apache_2.4-PHP_8.0\\bin;e:\\openserver\\modules\\http\\Apache_2.4-PHP_8.0;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'arm.admin.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/OpenServer/domains/arm/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/OpenServer/domains/arm/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'E:/OpenServer/domains/arm/backend/web/index.php'
+    'REMOTE_PORT' => '51024'
+    'REDIRECT_URL' => '/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1638876656.7755
+    'REQUEST_TIME' => 1638876656
+]
+2021-12-07 14:31:53 [127.0.0.1][1][1rp7n5mvk6h7np0jvpsci8pr9aac6umq][error][Error] Error: Class "mihaildev\ckeditor\CKEditor" not found in E:\OpenServer\domains\arm\backend\views\news\_form.php:21
+Stack trace:
+#0 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile()
+#2 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile()
+#3 E:\OpenServer\domains\arm\backend\views\news\create.php(15): yii\base\View->render()
+#4 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(348): require('E:\\OpenServer\\d...')
+#5 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile()
+#6 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile()
+#7 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Controller.php(410): yii\base\View->render()
+#8 E:\OpenServer\domains\arm\backend\controllers\NewsController.php(74): yii\base\Controller->render()
+#9 [internal function]: backend\controllers\NewsController->actionCreate()
+#10 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#11 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams()
+#12 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction()
+#13 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction()
+#14 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest()
+#15 E:\OpenServer\domains\arm\backend\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2021-12-07 14:31:50 [127.0.0.1][1][1rp7n5mvk6h7np0jvpsci8pr9aac6umq][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '1rp7n5mvk6h7np0jvpsci8pr9aac6umq'
+    '_identity-backend' => 'cd040b1946f13d1eb34f79f8445f58565a7788f98d73908f8142255a9528489fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ITJmXZrtzOM2UquppqQnIGRTF0DMls9H\",2592000]\";}'
+    '_csrf-backend' => '3c7df5c7e00b5219c82f4ce1103375a5c9fa577e776d1f214f0424cc03ba1b29a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"JS7pYPtyrEwagDPWCy0VuqQ2zueeDBf8\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://arm.admin.loc/'
+    '__id' => 1
+    '__authKey' => 'ITJmXZrtzOM2UquppqQnIGRTF0DMls9H'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'arm.admin.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://arm.admin.loc/news/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uz;q=0.6'
+    'HTTP_COOKIE' => 'advanced-backend=1rp7n5mvk6h7np0jvpsci8pr9aac6umq; _identity-backend=cd040b1946f13d1eb34f79f8445f58565a7788f98d73908f8142255a9528489fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ITJmXZrtzOM2UquppqQnIGRTF0DMls9H%22%2C2592000%5D%22%3B%7D; _csrf-backend=3c7df5c7e00b5219c82f4ce1103375a5c9fa577e776d1f214f0424cc03ba1b29a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22JS7pYPtyrEwagDPWCy0VuqQ2zueeDBf8%22%3B%7D'
+    'PATH' => 'e:\\openserver\\modules\\php\\PHP_8.0\\ext;e:\\openserver\\modules\\php\\PHP_8.0\\pear;e:\\openserver\\modules\\php\\PHP_8.0\\pear\\bin;e:\\openserver\\modules\\php\\PHP_8.0;e:\\openserver\\modules\\wget\\bin;e:\\openserver\\modules\\database\\MySQL-8.0-Win10\\bin;e:\\openserver\\modules\\http\\Apache_2.4-PHP_8.0\\bin;e:\\openserver\\modules\\http\\Apache_2.4-PHP_8.0;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'arm.admin.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/OpenServer/domains/arm/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/OpenServer/domains/arm/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'E:/OpenServer/domains/arm/backend/web/index.php'
+    'REMOTE_PORT' => '51059'
+    'REDIRECT_URL' => '/news/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/news/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1638876710.3221
+    'REQUEST_TIME' => 1638876710
+]
+2021-12-07 14:32:24 [127.0.0.1][1][1rp7n5mvk6h7np0jvpsci8pr9aac6umq][error][Error] Error: Class "mihaildev\ckeditor\CKEditor" not found in E:\OpenServer\domains\arm\backend\views\news\_form.php:21
+Stack trace:
+#0 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile()
+#2 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile()
+#3 E:\OpenServer\domains\arm\backend\views\news\create.php(15): yii\base\View->render()
+#4 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(348): require('E:\\OpenServer\\d...')
+#5 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile()
+#6 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile()
+#7 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Controller.php(410): yii\base\View->render()
+#8 E:\OpenServer\domains\arm\backend\controllers\NewsController.php(74): yii\base\Controller->render()
+#9 [internal function]: backend\controllers\NewsController->actionCreate()
+#10 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#11 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams()
+#12 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction()
+#13 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction()
+#14 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest()
+#15 E:\OpenServer\domains\arm\backend\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2021-12-07 14:32:21 [127.0.0.1][1][1rp7n5mvk6h7np0jvpsci8pr9aac6umq][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '1rp7n5mvk6h7np0jvpsci8pr9aac6umq'
+    '_identity-backend' => 'cd040b1946f13d1eb34f79f8445f58565a7788f98d73908f8142255a9528489fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ITJmXZrtzOM2UquppqQnIGRTF0DMls9H\",2592000]\";}'
+    '_csrf-backend' => '3c7df5c7e00b5219c82f4ce1103375a5c9fa577e776d1f214f0424cc03ba1b29a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"JS7pYPtyrEwagDPWCy0VuqQ2zueeDBf8\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://arm.admin.loc/'
+    '__id' => 1
+    '__authKey' => 'ITJmXZrtzOM2UquppqQnIGRTF0DMls9H'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'arm.admin.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://arm.admin.loc/news/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uz;q=0.6'
+    'HTTP_COOKIE' => 'advanced-backend=1rp7n5mvk6h7np0jvpsci8pr9aac6umq; _identity-backend=cd040b1946f13d1eb34f79f8445f58565a7788f98d73908f8142255a9528489fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ITJmXZrtzOM2UquppqQnIGRTF0DMls9H%22%2C2592000%5D%22%3B%7D; _csrf-backend=3c7df5c7e00b5219c82f4ce1103375a5c9fa577e776d1f214f0424cc03ba1b29a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22JS7pYPtyrEwagDPWCy0VuqQ2zueeDBf8%22%3B%7D'
+    'PATH' => 'e:\\openserver\\modules\\php\\PHP_8.0\\ext;e:\\openserver\\modules\\php\\PHP_8.0\\pear;e:\\openserver\\modules\\php\\PHP_8.0\\pear\\bin;e:\\openserver\\modules\\php\\PHP_8.0;e:\\openserver\\modules\\wget\\bin;e:\\openserver\\modules\\database\\MySQL-8.0-Win10\\bin;e:\\openserver\\modules\\http\\Apache_2.4-PHP_8.0\\bin;e:\\openserver\\modules\\http\\Apache_2.4-PHP_8.0;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'arm.admin.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/OpenServer/domains/arm/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/OpenServer/domains/arm/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'E:/OpenServer/domains/arm/backend/web/index.php'
+    'REMOTE_PORT' => '51086'
+    'REDIRECT_URL' => '/news/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/news/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1638876741.6266
+    'REQUEST_TIME' => 1638876741
+]
+2021-12-07 14:32:51 [127.0.0.1][1][1rp7n5mvk6h7np0jvpsci8pr9aac6umq][error][Error] Error: Class "mihaildev\ckeditor\CKEditor" not found in E:\OpenServer\domains\arm\backend\views\news\_form.php:21
+Stack trace:
+#0 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile()
+#2 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile()
+#3 E:\OpenServer\domains\arm\backend\views\news\create.php(15): yii\base\View->render()
+#4 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(348): require('E:\\OpenServer\\d...')
+#5 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile()
+#6 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile()
+#7 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Controller.php(410): yii\base\View->render()
+#8 E:\OpenServer\domains\arm\backend\controllers\NewsController.php(74): yii\base\Controller->render()
+#9 [internal function]: backend\controllers\NewsController->actionCreate()
+#10 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#11 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams()
+#12 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction()
+#13 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction()
+#14 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest()
+#15 E:\OpenServer\domains\arm\backend\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2021-12-07 14:32:49 [127.0.0.1][1][1rp7n5mvk6h7np0jvpsci8pr9aac6umq][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '1rp7n5mvk6h7np0jvpsci8pr9aac6umq'
+    '_identity-backend' => 'cd040b1946f13d1eb34f79f8445f58565a7788f98d73908f8142255a9528489fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ITJmXZrtzOM2UquppqQnIGRTF0DMls9H\",2592000]\";}'
+    '_csrf-backend' => '3c7df5c7e00b5219c82f4ce1103375a5c9fa577e776d1f214f0424cc03ba1b29a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"JS7pYPtyrEwagDPWCy0VuqQ2zueeDBf8\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://arm.admin.loc/'
+    '__id' => 1
+    '__authKey' => 'ITJmXZrtzOM2UquppqQnIGRTF0DMls9H'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'arm.admin.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://arm.admin.loc/news/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uz;q=0.6'
+    'HTTP_COOKIE' => 'advanced-backend=1rp7n5mvk6h7np0jvpsci8pr9aac6umq; _identity-backend=cd040b1946f13d1eb34f79f8445f58565a7788f98d73908f8142255a9528489fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ITJmXZrtzOM2UquppqQnIGRTF0DMls9H%22%2C2592000%5D%22%3B%7D; _csrf-backend=3c7df5c7e00b5219c82f4ce1103375a5c9fa577e776d1f214f0424cc03ba1b29a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22JS7pYPtyrEwagDPWCy0VuqQ2zueeDBf8%22%3B%7D'
+    'PATH' => 'e:\\openserver\\modules\\php\\PHP_8.0\\ext;e:\\openserver\\modules\\php\\PHP_8.0\\pear;e:\\openserver\\modules\\php\\PHP_8.0\\pear\\bin;e:\\openserver\\modules\\php\\PHP_8.0;e:\\openserver\\modules\\wget\\bin;e:\\openserver\\modules\\database\\MySQL-8.0-Win10\\bin;e:\\openserver\\modules\\http\\Apache_2.4-PHP_8.0\\bin;e:\\openserver\\modules\\http\\Apache_2.4-PHP_8.0;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'arm.admin.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/OpenServer/domains/arm/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/OpenServer/domains/arm/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'E:/OpenServer/domains/arm/backend/web/index.php'
+    'REMOTE_PORT' => '51116'
+    'REDIRECT_URL' => '/news/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/news/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1638876769.772
+    'REQUEST_TIME' => 1638876769
+]
+2021-12-07 14:35:27 [127.0.0.1][1][1rp7n5mvk6h7np0jvpsci8pr9aac6umq][error][Error] Error: Class "mihaildev\ckeditor\CKEditor" not found in E:\OpenServer\domains\arm\backend\views\news\_form.php:21
+Stack trace:
+#0 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile()
+#2 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile()
+#3 E:\OpenServer\domains\arm\backend\views\news\create.php(15): yii\base\View->render()
+#4 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(348): require('E:\\OpenServer\\d...')
+#5 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile()
+#6 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile()
+#7 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Controller.php(410): yii\base\View->render()
+#8 E:\OpenServer\domains\arm\backend\controllers\NewsController.php(74): yii\base\Controller->render()
+#9 [internal function]: backend\controllers\NewsController->actionCreate()
+#10 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#11 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams()
+#12 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction()
+#13 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction()
+#14 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest()
+#15 E:\OpenServer\domains\arm\backend\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2021-12-07 14:35:25 [127.0.0.1][1][1rp7n5mvk6h7np0jvpsci8pr9aac6umq][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '1rp7n5mvk6h7np0jvpsci8pr9aac6umq'
+    '_identity-backend' => 'cd040b1946f13d1eb34f79f8445f58565a7788f98d73908f8142255a9528489fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ITJmXZrtzOM2UquppqQnIGRTF0DMls9H\",2592000]\";}'
+    '_csrf-backend' => '3c7df5c7e00b5219c82f4ce1103375a5c9fa577e776d1f214f0424cc03ba1b29a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"JS7pYPtyrEwagDPWCy0VuqQ2zueeDBf8\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://arm.admin.loc/'
+    '__id' => 1
+    '__authKey' => 'ITJmXZrtzOM2UquppqQnIGRTF0DMls9H'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'arm.admin.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://arm.admin.loc/news/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uz;q=0.6'
+    'HTTP_COOKIE' => 'advanced-backend=1rp7n5mvk6h7np0jvpsci8pr9aac6umq; _identity-backend=cd040b1946f13d1eb34f79f8445f58565a7788f98d73908f8142255a9528489fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ITJmXZrtzOM2UquppqQnIGRTF0DMls9H%22%2C2592000%5D%22%3B%7D; _csrf-backend=3c7df5c7e00b5219c82f4ce1103375a5c9fa577e776d1f214f0424cc03ba1b29a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22JS7pYPtyrEwagDPWCy0VuqQ2zueeDBf8%22%3B%7D'
+    'PATH' => 'e:\\openserver\\modules\\php\\PHP_8.0\\ext;e:\\openserver\\modules\\php\\PHP_8.0\\pear;e:\\openserver\\modules\\php\\PHP_8.0\\pear\\bin;e:\\openserver\\modules\\php\\PHP_8.0;e:\\openserver\\modules\\wget\\bin;e:\\openserver\\modules\\database\\MySQL-8.0-Win10\\bin;e:\\openserver\\modules\\http\\Apache_2.4-PHP_8.0\\bin;e:\\openserver\\modules\\http\\Apache_2.4-PHP_8.0;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'arm.admin.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/OpenServer/domains/arm/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/OpenServer/domains/arm/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'E:/OpenServer/domains/arm/backend/web/index.php'
+    'REMOTE_PORT' => '51659'
+    'REDIRECT_URL' => '/news/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/news/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1638876925.0433
+    'REQUEST_TIME' => 1638876925
+]
+2021-12-07 14:36:26 [127.0.0.1][1][1rp7n5mvk6h7np0jvpsci8pr9aac6umq][error][Error] Error: Class "mihaildev\ckeditor\CKEditor" not found in E:\OpenServer\domains\arm\backend\views\news\_form.php:21
+Stack trace:
+#0 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile()
+#2 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile()
+#3 E:\OpenServer\domains\arm\backend\views\news\create.php(15): yii\base\View->render()
+#4 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(348): require('E:\\OpenServer\\d...')
+#5 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile()
+#6 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile()
+#7 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Controller.php(410): yii\base\View->render()
+#8 E:\OpenServer\domains\arm\backend\controllers\NewsController.php(74): yii\base\Controller->render()
+#9 [internal function]: backend\controllers\NewsController->actionCreate()
+#10 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#11 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams()
+#12 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction()
+#13 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction()
+#14 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest()
+#15 E:\OpenServer\domains\arm\backend\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2021-12-07 14:36:24 [127.0.0.1][1][1rp7n5mvk6h7np0jvpsci8pr9aac6umq][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '1rp7n5mvk6h7np0jvpsci8pr9aac6umq'
+    '_identity-backend' => 'cd040b1946f13d1eb34f79f8445f58565a7788f98d73908f8142255a9528489fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ITJmXZrtzOM2UquppqQnIGRTF0DMls9H\",2592000]\";}'
+    '_csrf-backend' => '3c7df5c7e00b5219c82f4ce1103375a5c9fa577e776d1f214f0424cc03ba1b29a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"JS7pYPtyrEwagDPWCy0VuqQ2zueeDBf8\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://arm.admin.loc/'
+    '__id' => 1
+    '__authKey' => 'ITJmXZrtzOM2UquppqQnIGRTF0DMls9H'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'arm.admin.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://arm.admin.loc/news/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uz;q=0.6'
+    'HTTP_COOKIE' => 'advanced-backend=1rp7n5mvk6h7np0jvpsci8pr9aac6umq; _identity-backend=cd040b1946f13d1eb34f79f8445f58565a7788f98d73908f8142255a9528489fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ITJmXZrtzOM2UquppqQnIGRTF0DMls9H%22%2C2592000%5D%22%3B%7D; _csrf-backend=3c7df5c7e00b5219c82f4ce1103375a5c9fa577e776d1f214f0424cc03ba1b29a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22JS7pYPtyrEwagDPWCy0VuqQ2zueeDBf8%22%3B%7D'
+    'PATH' => 'e:\\openserver\\modules\\php\\PHP_8.0\\ext;e:\\openserver\\modules\\php\\PHP_8.0\\pear;e:\\openserver\\modules\\php\\PHP_8.0\\pear\\bin;e:\\openserver\\modules\\php\\PHP_8.0;e:\\openserver\\modules\\wget\\bin;e:\\openserver\\modules\\database\\MySQL-8.0-Win10\\bin;e:\\openserver\\modules\\http\\Apache_2.4-PHP_8.0\\bin;e:\\openserver\\modules\\http\\Apache_2.4-PHP_8.0;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'arm.admin.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/OpenServer/domains/arm/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/OpenServer/domains/arm/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'E:/OpenServer/domains/arm/backend/web/index.php'
+    'REMOTE_PORT' => '51696'
+    'REDIRECT_URL' => '/news/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/news/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1638876984.2791
+    'REQUEST_TIME' => 1638876984
+]
+2021-12-07 14:38:15 [127.0.0.1][1][1rp7n5mvk6h7np0jvpsci8pr9aac6umq][error][Error] Error: Class "mihaildev\elfinder\ElFinder" not found in E:\OpenServer\domains\arm\backend\views\news\_form.php:22
+Stack trace:
+#0 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile()
+#2 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile()
+#3 E:\OpenServer\domains\arm\backend\views\news\create.php(15): yii\base\View->render()
+#4 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(348): require('E:\\OpenServer\\d...')
+#5 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile()
+#6 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile()
+#7 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Controller.php(410): yii\base\View->render()
+#8 E:\OpenServer\domains\arm\backend\controllers\NewsController.php(74): yii\base\Controller->render()
+#9 [internal function]: backend\controllers\NewsController->actionCreate()
+#10 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array()
+#11 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams()
+#12 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction()
+#13 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction()
+#14 E:\OpenServer\domains\arm\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest()
+#15 E:\OpenServer\domains\arm\backend\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2021-12-07 14:38:13 [127.0.0.1][1][1rp7n5mvk6h7np0jvpsci8pr9aac6umq][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '1rp7n5mvk6h7np0jvpsci8pr9aac6umq'
+    '_identity-backend' => 'cd040b1946f13d1eb34f79f8445f58565a7788f98d73908f8142255a9528489fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"ITJmXZrtzOM2UquppqQnIGRTF0DMls9H\",2592000]\";}'
+    '_csrf-backend' => '3c7df5c7e00b5219c82f4ce1103375a5c9fa577e776d1f214f0424cc03ba1b29a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"JS7pYPtyrEwagDPWCy0VuqQ2zueeDBf8\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://arm.admin.loc/'
+    '__id' => 1
+    '__authKey' => 'ITJmXZrtzOM2UquppqQnIGRTF0DMls9H'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'arm.admin.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://arm.admin.loc/news/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uz;q=0.6'
+    'HTTP_COOKIE' => 'advanced-backend=1rp7n5mvk6h7np0jvpsci8pr9aac6umq; _identity-backend=cd040b1946f13d1eb34f79f8445f58565a7788f98d73908f8142255a9528489fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22ITJmXZrtzOM2UquppqQnIGRTF0DMls9H%22%2C2592000%5D%22%3B%7D; _csrf-backend=3c7df5c7e00b5219c82f4ce1103375a5c9fa577e776d1f214f0424cc03ba1b29a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22JS7pYPtyrEwagDPWCy0VuqQ2zueeDBf8%22%3B%7D'
+    'PATH' => 'e:\\openserver\\modules\\php\\PHP_8.0\\ext;e:\\openserver\\modules\\php\\PHP_8.0\\pear;e:\\openserver\\modules\\php\\PHP_8.0\\pear\\bin;e:\\openserver\\modules\\php\\PHP_8.0;e:\\openserver\\modules\\wget\\bin;e:\\openserver\\modules\\database\\MySQL-8.0-Win10\\bin;e:\\openserver\\modules\\http\\Apache_2.4-PHP_8.0\\bin;e:\\openserver\\modules\\http\\Apache_2.4-PHP_8.0;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'arm.admin.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/OpenServer/domains/arm/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/OpenServer/domains/arm/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'E:/OpenServer/domains/arm/backend/web/index.php'
+    'REMOTE_PORT' => '51737'
+    'REDIRECT_URL' => '/news/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/news/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1638877093.7025
+    'REQUEST_TIME' => 1638877093
+]
