@@ -22,7 +22,7 @@
                             ?>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <img src="<?=Yii::$app->request->baseUrl.'/web/images/'.$item->img?>" class="img-thumbnail" style="width: 300px" alt="img">
+                                    <img src="<?=Yii::$app->request->baseUrl.'/admin/images/'.$item->img?>" class="img-thumbnail" style="width: 300px" alt="img">
                                 </div>
                                 <div class="col-md-9">
                                     <a style="color: rgba(0,157,255,0.98);" href="<?= \yii\helpers\Url::to(['/site/batafsil?id='.$item->id])?>"><p><?=$item[$title]?></p></a>

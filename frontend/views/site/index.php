@@ -141,7 +141,7 @@ $this->title = 'UrDU Axborot resurs markazi';
                         <div class="col-lg-3 col-md-3 col-sm-3">
                             <div class="mu-abtus-counter-single">
                                 <span class="fa fa-bank"></span>
-                                <h4 class="counter">292322</h4>
+                                <h4 class="counter">300789</h4>
                                 <p>Umumiy kitob fondi</p>
                             </div>
                         </div>
@@ -150,8 +150,8 @@ $this->title = 'UrDU Axborot resurs markazi';
                         <div class="col-lg-3 col-md-3 col-sm-3">
                             <div class="mu-abtus-counter-single">
                                 <span class="fa fa-bookmark"></span>
-                                <h4 class="counter">214784</h4>
-                                <p> o'quv qo'llanmalar </p>
+                                <h4 class="counter">223930</h4>
+                                <p> O'quv Adabiyotlari </p>
                             </div>
                         </div>
                         <!-- End counter item -->
@@ -159,7 +159,7 @@ $this->title = 'UrDU Axborot resurs markazi';
                         <div class="col-lg-3 col-md-3 col-sm-3">
                             <div class="mu-abtus-counter-single">
                                 <span class="fa fa-bookmark-o"></span>
-                                <h4 class="counter">55577</h4>
+                                <h4 class="counter">54227</h4>
                                 <p>Badiy adabiyotlar</p>
                             </div>
                         </div>
@@ -168,7 +168,7 @@ $this->title = 'UrDU Axborot resurs markazi';
                         <div class="col-lg-3 col-md-3 col-sm-3">
                             <div class="mu-abtus-counter-single no-border">
                                 <span class="fa fa-book"></span>
-                                <h4 class="counter">21961</h4>
+                                <h4 class="counter">22632</h4>
                                 <p>Ilmiy adabiyotlar</p>
                             </div>
                         </div>
