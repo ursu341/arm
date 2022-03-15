@@ -64,7 +64,7 @@ class News extends \yii\db\ActiveRecord
     public function beforeSave($insert){
 
         $this->image = UploadedFile::getInstance($this,'image');
-        if($this->image != null &&  $this->image->saveAs(Yii::getAlias  ('@frontend').'/images/' . time() . '.' . $this->image->extension)){
+        if($this->image != null &&  $this->image->saveAs(Yii::getAlias  ('@frontend').'/web/images/' . time() . '.' . $this->image->extension)){
             $this->img = time() . '.' . $this->image->extension;
         }
 
