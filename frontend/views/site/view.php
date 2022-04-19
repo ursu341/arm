@@ -12,6 +12,6 @@
         <hr><p style="text-align: justify"><?=$model[$text]?></p>
 
         <hr>
-        <img src="/backend/web/images/<?=$model->img?>" style="width: 100%" alt="">
+        <img src="<?=Yii::getAlias('@web')."/images/".$model->img?>" style="width: 100%" alt="">
     </div>
 </div>
