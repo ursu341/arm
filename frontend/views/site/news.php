@@ -4,7 +4,9 @@
  * User: MRK
  * Date: 25.02.2019
  * Time: 10:58
- */?>
+ */
+
+use yii\helpers\Url; ?>
 <section id="mu-features">
     <div class="container">
         <div class="row">
@@ -22,19 +24,23 @@
                             ?>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <img src="<?=Yii::$app->request->baseUrl.'/images/'.$item->img?>" class="img-thumbnail" style="width: 300px" alt="img">
+                                    <img src="<?= Yii::$app->request->baseUrl . '/images/' . $item->img ?>"
+                                         class="img-thumbnail" style="width: 300px" alt="img">
                                 </div>
                                 <div class="col-md-9">
-                                    <a style="color: rgba(0,157,255,0.98);" href="<?= \yii\helpers\Url::to(['/site/batafsil?id='.$item->id])?>"><p><?=$item[$title]?></p></a>
-                                    <p ><?= mb_substr($item[$text],'0','300')?> ...</p>
-                                    <p><i class="fa fa-user"> Admin </i> <i class="fa fa-calendar"></i> <?=$item->date?>.</p>
-                                    <a href="<?= \yii\helpers\Url::to(['/site/batafsil?id='.$item->id])?>">Batafsil...</a>
+                                    <a style="color: rgba(0,157,255,0.98);"
+                                       href="<?= Url::to(['/site/batafsil?id=' . $item->id]) ?>">
+                                        <p><?= $item[$title] ?></p></a>
+                                    <p><?= mb_substr($item[$text], '0', '300') ?> ...</p>
+                                    <p><i class="fa fa-user"> Admin </i> <i
+                                                class="fa fa-calendar"></i> <?= $item->date ?>.</p>
+                                    <a href="<?= Url::to(['/site/batafsil?id=' . $item->id]) ?>">Batafsil...</a>
 
                                 </div>
 
                             </div>
                             <hr>
-                        <?php endforeach;?>
+                        <?php endforeach; ?>
                     </div>
                     <hr>
 
@@ -43,4 +49,4 @@
             </div>
         </div>
     </div>
-    </section>
+</section>

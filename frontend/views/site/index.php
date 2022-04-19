@@ -1,8 +1,6 @@
 </div>
 <?php
-
 /* @var $this yii\web\View */
-
 $this->title = 'UrDU Axborot resurs markazi';
 ?>
 
@@ -199,7 +197,7 @@ $this->title = 'UrDU Axborot resurs markazi';
                             ?>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <img src="/backend/web/images/<?= $item->img ?>" class="img-thumbnail"
+                                    <img src="<?= Yii::getAlias('@web') . $item->img ?>" class="img-thumbnail"
                                          style="width: 300px" alt="img">
                                 </div>
                                 <div class="col-md-9">
