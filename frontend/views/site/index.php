@@ -1,6 +1,9 @@
 </div>
 <?php
 /* @var $this yii\web\View */
+
+use yii\helpers\Url;
+
 $this->title = 'UrDU Axborot resurs markazi';
 ?>
 
@@ -11,21 +14,17 @@ $this->title = 'UrDU Axborot resurs markazi';
     <div class="mu-slider-single">
         <div class="mu-slider-img">
             <figure>
-                <img src="<?= Yii::$app->request->baseUrl ?>/Varsity/assets/img/slider/slider3.jpg" alt="img">
+                <img src="<?= Yii::getAlias('@web') . '/Varsity/assets/img/slider/slider3.jpg' ?>" alt="img">
             </figure>
         </div>
         <div class="mu-slider-content">
         </div>
     </div>
     <!-- Start single slider item -->
-    <!-- Start single slider item -->
-
-    <!-- Start single slider item -->
-    <!-- Start single slider item -->
     <div class="mu-slider-single">
         <div class="mu-slider-img">
             <figure>
-                <img src="<?= Yii::$app->request->baseUrl ?>/Varsity/assets/img/slider/slider1.jpg" alt="img">
+                <img src="<?= Yii::getAlias('@web') . '/Varsity/assets/img/slider/slider1.jpg' ?>" alt="img">
             </figure>
         </div>
         <div class="mu-slider-content">
@@ -89,8 +88,9 @@ $this->title = 'UrDU Axborot resurs markazi';
                             <div class="">
                                 <p>
                                     Urganch davlat universitetining axborot-resurs markazi
-                                    nizomi va foydalanish qoidalari <a href="/file/Urdu_arm_nizomi-2017.pdf"
-                                                                       target="_blank" class="btn-link">(yuklab olish)
+                                    nizomi va foydalanish qoidalari <a
+                                            href="<?= Yii::getAlias('@web') . '/file/Urdu_arm_nizomi-2017.pdf' ?>"
+                                            target="_blank" class="btn-link">(yuklab olish)
                                         <i class="fa fa-download"></i></a>
                                 </p>
                                 <!-- End Title -->
@@ -114,10 +114,8 @@ $this->title = 'UrDU Axborot resurs markazi';
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="">
-
-                                <img src="<?= Yii::$app->request->baseUrl ?>/Varsity/assets/img/1.jpg"
+                                <img src="<?= Yii::getAlias('@web') . '/Varsity/assets/img/1.jpg' ?>"
                                      class="img-thumbnail" style="width: 540px" alt="img">
-
                             </div>
                         </div>
                     </div>
@@ -197,18 +195,26 @@ $this->title = 'UrDU Axborot resurs markazi';
                             ?>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <img src="<?= Yii::getAlias('@web') .'/images/'. $item->img ?>" class="img-thumbnail"
+                                    <img src="<?= Yii::getAlias('@web') . '/images/' . $item->img ?>"
+                                         class="img-thumbnail"
                                          style="width: 300px" alt="img">
                                 </div>
                                 <div class="col-md-9">
                                     <a style="color: rgba(0,157,255,0.98);"
-                                       href="<?= \yii\helpers\Url::to(['/site/batafsil?id=' . $item->id]) ?>">
+                                       href="<?= Url::to(['/site/batafsil?id=' . $item->id]) ?>">
                                         <p><?= $item[$title] ?></p></a>
                                     <p><?= strip_tags(mb_substr($item[$text], '0', '300')) ?> ...</p>
-                                    <p><i class="fa fa-user"> Admin </i> <i
-                                                class="fa fa-calendar"></i> <?= $item->date ?>.</p>
-                                    <a href="<?= \yii\helpers\Url::to(['/site/batafsil?id=' . $item->id]) ?>">Batafsil...</a>
+                                    <div class="row">
 
+                                        <div class="col-md-6" style="text-align: start">
+                                            <a class="btn btn-info"
+                                               href="<?= Url::to(['/site/batafsil?id=' . $item->id]) ?>">Batafsil...</a>
+                                        </div>
+                                        <div class="col-md-6" style="text-align: end">
+                                            <p><i class="fa fa-user"> Admin </i> <i
+                                                        class="fa fa-calendar"></i> <?= $item->date ?>.</p>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
