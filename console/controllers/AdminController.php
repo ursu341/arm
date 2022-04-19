@@ -13,7 +13,7 @@ class AdminController extends Controller
         $model = new User();
         $model->username = 'qalandardev';
         $model->generateAuthKey();
-        $model->setPassword('Admin2412');
+        $model->setPassword('AdminAdmin123!');
         $model->generatePasswordResetToken();
         $model->email = 'admin@urdu.uz';
         $model->status = 10;
