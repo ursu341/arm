@@ -31,7 +31,7 @@ use yii\helpers\Url; ?>
                                     <a style="color: rgba(0,157,255,0.98);"
                                        href="<?= Url::to(['/site/batafsil?id=' . $item->id]) ?>">
                                         <p><?= $item[$title] ?></p></a>
-                                    <p><?= mb_substr($item[$text], '0', '300') ?> ...</p>
+                                    <p><?= strip_tags(mb_substr($item[$text], '0', '300')) ?> ...</p>
                                     <p><i class="fa fa-user"> Admin </i> <i
                                                 class="fa fa-calendar"></i> <?= $item->date ?>.</p>
                                     <a href="<?= Url::to(['/site/batafsil?id=' . $item->id]) ?>">Batafsil...</a>
