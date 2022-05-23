@@ -4,6 +4,7 @@ namespace backend\models;
 
 use Yii;
 use yii\web\UploadedFile;
+
 /**
  * This is the model class for table "foto".
  *
@@ -44,10 +45,12 @@ class Foto extends \yii\db\ActiveRecord
             'img' => 'Img',
         ];
     }
-    public function beforeSave($insert){
 
-        $this->imageFile = UploadedFile::getInstance($this,'imageFile');
-        if($this->imageFile != null &&  $this->imageFile->saveAs(Yii::getAlias('@web').'/web/images/' . $this->imageFile->baseName . '.' . $this->imageFile->extension)){
+    public function beforeSave($insert)
+    {
+
+        $this->imageFile = UploadedFile::getInstance($this, 'imageFile');
+        if ($this->imageFile != null && $this->imageFile->saveAs(Yii::getAlias('@images') . '/' . $this->imageFile->baseName . '.' . $this->imageFile->extension)) {
             $this->img = $this->imageFile->baseName . '.' . $this->imageFile->extension;
         }
 
@@ -55,9 +58,10 @@ class Foto extends \yii\db\ActiveRecord
 
     }
 
-    public function afterDelete(){
-        if(file_exists('images/'.$this->img))
-            unlink('images/'.$this->img);
+    public function afterDelete()
+    {
+        if (file_exists('images/' . $this->img))
+            unlink('images/' . $this->img);
         return true;
     }
 
