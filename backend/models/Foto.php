@@ -49,9 +49,9 @@ class Foto extends \yii\db\ActiveRecord
     public function beforeSave($insert)
     {
 
-        $this->img = UploadedFile::getInstance($this, 'img');
-        if ($this->img !== null && $this->img->saveAs(Yii::getAlias('@web') . '/images/' . $this->img->baseName . '.' . $this->img->extension)) {
-            $this->img = $this->img->baseName . '.' . $this->img->extension;
+        $img = UploadedFile::getInstance($this, 'img');
+        if ($img !== null && $img->saveAs(Yii::getAlias('@web') . '/images/' . $img->baseName . '.' . $img->extension)) {
+            $this->img = $img->baseName . '.' . $img->extension;
         }
 
         return true;
