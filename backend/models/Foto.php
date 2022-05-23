@@ -50,7 +50,7 @@ class Foto extends \yii\db\ActiveRecord
     {
 
         $this->imageFile = UploadedFile::getInstance($this, 'imageFile');
-        if ($this->imageFile != null && $this->imageFile->saveAs(Yii::getAlias('@images') . '/' . $this->imageFile->baseName . '.' . $this->imageFile->extension)) {
+        if ($this->imageFile != null && $this->imageFile->saveAs(Yii::getAlias('@frontend') . '/web/images/' . $this->imageFile->baseName . '.' . $this->imageFile->extension)) {
             $this->img = $this->imageFile->baseName . '.' . $this->imageFile->extension;
         }
 
