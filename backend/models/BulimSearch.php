@@ -18,7 +18,7 @@ class BulimSearch extends Bulim
     {
         return [
             [['id'], 'integer'],
-            [['name_uz', 'name_ru', 'name_en', 'text_uz', 'text_ru', 'taxt_en'], 'safe'],
+            [['name_uz', 'name_ru', 'name_en', 'text_uz', 'text_ru', 'text_en'], 'safe'],
         ];
     }
 
@@ -66,7 +66,7 @@ class BulimSearch extends Bulim
             ->andFilterWhere(['like', 'name_en', $this->name_en])
             ->andFilterWhere(['like', 'text_uz', $this->text_uz])
             ->andFilterWhere(['like', 'text_ru', $this->text_ru])
-            ->andFilterWhere(['like', 'taxt_en', $this->taxt_en]);
+            ->andFilterWhere(['like', 'text_en', $this->text_en]);
 
         return $dataProvider;
     }

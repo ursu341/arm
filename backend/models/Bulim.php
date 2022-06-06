@@ -13,7 +13,7 @@ use Yii;
  * @property string $name_en
  * @property string $text_uz
  * @property string $text_ru
- * @property string $taxt_en
+ * @property string $text_en
  */
 class Bulim extends \yii\db\ActiveRecord
 {
@@ -22,7 +22,7 @@ class Bulim extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'bulim';
+        return '{{%arm.bulim}}';
     }
 
     /**
@@ -31,8 +31,8 @@ class Bulim extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name_uz', 'name_ru', 'name_en', 'text_uz', 'text_ru', 'taxt_en'], 'required'],
-            [['text_uz', 'text_ru', 'taxt_en'], 'string'],
+            [['name_uz', 'name_ru', 'name_en', 'text_uz', 'text_ru', 'text_en'], 'required'],
+            [['text_uz', 'text_ru', 'text_en'], 'string'],
             [['name_uz', 'name_ru', 'name_en'], 'string', 'max' => 255],
         ];
     }
@@ -49,7 +49,7 @@ class Bulim extends \yii\db\ActiveRecord
             'name_en' => 'Name En',
             'text_uz' => 'Text Uz',
             'text_ru' => 'Text Ru',
-            'taxt_en' => 'Taxt En',
+            'text_en' => 'Taxt En',
         ];
     }
 }

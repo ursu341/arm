@@ -4,9 +4,12 @@
  * User: MRK
  * Date: 25.02.2019
  * Time: 12:14
- */?>
+ */
+
+?>
 <br>
 <br>
+
 <?php if($bulim[$text]){?>
 <h3 style="text-align: center; margin-top: 20px">BO'LIM HAQIDA</h3>
 <p><?=$bulim[$text]?></p>

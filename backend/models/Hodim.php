@@ -34,7 +34,7 @@ class Hodim extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'hodim';
+        return '{{%arm.hodim}}';
     }
 
     /**

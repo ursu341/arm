@@ -27,7 +27,8 @@
 	 "cinghie/yii2-multilanguage" : "*",
 	 "mihaildev/yii2-ckeditor" : "^1.0",
 	 "mihaildev/yii2-elfinder" : "^1.4",
-    "kartik-v/yii2-widget-select2": "dev-master"
+    "kartik-v/yii2-widget-select2": "dev-master",
+    "bizley/migration": "^4.3"
   },
   "require-dev" : {
 	 "yiisoft/yii2-debug" : "~2.1.0",

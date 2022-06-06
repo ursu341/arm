@@ -28,7 +28,7 @@ use yii\widgets\ActiveForm;
         'editorOptions' => \mihaildev\elfinder\ElFinder::ckeditorOptions('elfinder',[]),
 
     ]);
-    echo $form->field($model, 'taxt_en')->widget(\mihaildev\ckeditor\CKEditor::className(), [
+    echo $form->field($model, 'text_en')->widget(\mihaildev\ckeditor\CKEditor::className(), [
         'editorOptions' => \mihaildev\elfinder\ElFinder::ckeditorOptions('elfinder',[]),
 
     ]);

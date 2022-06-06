@@ -26,7 +26,7 @@ class Books extends \yii\db\ActiveRecord
 
     public static function tableName()
     {
-        return 'books';
+        return '{{%arm.books}}';
     }
 
     public function behaviors()

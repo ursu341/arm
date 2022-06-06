@@ -32,7 +32,7 @@ class Book extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'book';
+        return '{{%arm.books}}';
     }
 
     /**

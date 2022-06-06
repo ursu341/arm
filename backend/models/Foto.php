@@ -21,7 +21,7 @@ class Foto extends \yii\db\ActiveRecord
 
     public static function tableName()
     {
-        return 'foto';
+        return '{{%arm.foto}}';
     }
 
     /**
