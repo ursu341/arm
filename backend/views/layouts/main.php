@@ -41,7 +41,6 @@ AppAsset::register($this);
     } else {
         $menuItems = [
             ['label' => 'Bosh sahifa', 'url' => ['/site/index']],
-            ['label' => 'Kitoblar soni', 'url' => ['/book/index']],
             ['label' => 'Yangiliklar', 'url' => ['/news/index']],
             ['label' => 'Fotolavhalar', 'url' => ['/foto/index']],
             ['label' => "Bo'limlar", 'url' => ['/bulim/index']],
