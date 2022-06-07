@@ -1,11 +1,26 @@
-AddDefaultCharset UTF-8
- 
-Options -Indexes
- 
-RewriteEngine On
- 
-RewriteCond %{REQUEST_URI} ^/(admin)
-RewriteRule ^admin(.*)$ backend/web/$1 [L]
- 
-RewriteCond %{REQUEST_URI} ^/
-RewriteRule ^(.*)$ frontend/web/$1 [L]
+    Options +FollowSymlinks
+    # Enable mod_rewrite
+    RewriteEngine On
+
+    # Backend redirect
+       RewriteCond %{REQUEST_URI} ^/(admin)
+       RewriteRule ^admin/assets/(.*)$ backend/web/assets/$1 [L]
+       RewriteRule ^admin/css/(.*)$ backend/web/css/$1 [L]
+       RewriteRule ^admin/js/(.*)$ backend/web/js/$1 [L]
+       RewriteRule ^admin/img/(.*)$ backend/web/img/$1 [L]
+       RewriteCond %{REQUEST_URI} !^/backend/web/(assets|js|css|js)/
+       RewriteCond %{REQUEST_URI} ^/(admin)
+       RewriteRule ^.*$ backend/web/index.php [L]
+
+    # Statics redirect
+#    RewriteCond %{REQUEST_URI} ^/phpm
+#    RewriteRule ^phpm/(.*)$ phpm/$1 [L]
+
+    # Frontend redirect
+    RewriteCond %{REQUEST_URI} ^/(assets|css|js|images)
+    RewriteRule ^assets/(.*)$ frontend/web/assets/$1 [L]
+    RewriteRule ^css/(.*)$ frontend/web/css/$1 [L]
+    RewriteRule ^js/(.*)$ frontend/web/js/$1 [L]
+    RewriteRule ^img/(.*)$ frontend/web/img/$1 [L]
+    RewriteCond %{REQUEST_URI} ^(.*)$
+    RewriteRule ^(.*)$ frontend/web/$1

@@ -50,18 +50,19 @@ class Foto extends \yii\db\ActiveRecord
     {
 
         $this->imageFile = UploadedFile::getInstance($this, 'imageFile');
-        if ($this->imageFile != null && $this->imageFile->saveAs(Yii::getAlias('@frontend') . '/web/images/' . $this->imageFile->baseName . '.' . $this->imageFile->extension)) {
+        if ($this->imageFile !== null && $this->imageFile->saveAs(Yii::getAlias('@image') . '/' . $this->imageFile->baseName . '.' . $this->imageFile->extension)) {
             $this->img = $this->imageFile->baseName . '.' . $this->imageFile->extension;
+            return true;
         }
-
-        return true;
+        return false;
 
     }
 
     public function afterDelete()
     {
-        if (file_exists('images/' . $this->img))
+        if (file_exists('images/' . $this->img)) {
             unlink('images/' . $this->img);
+        }
         return true;
     }
 

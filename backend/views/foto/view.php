@@ -16,7 +16,7 @@ $this->title = '';
 
     <p>
         <?= Html::a('Yangilash', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a("Yangilash", ['delete', 'id' => $model->id], [
+        <?= Html::a("O'chirish", ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -29,7 +29,13 @@ $this->title = '';
         'model' => $model,
         'attributes' => [
 
-            'img',
+            [
+                'label' => 'img',
+                'format'=>'raw',
+                'value' => static function ($model) {
+                    return Html::img('http://'.Yii::$app->request->getHostName(true).'/images/'.$model->img,['width'=>'100px','height'=>'100px']);
+                }
+            ]
         ],
     ]) ?>
 
