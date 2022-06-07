@@ -1,5 +1,6 @@
 <?php
 
+use kartik\file\FileInput;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -13,10 +14,22 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'images')->fileInput() ?>
-
     <?= $form->field($model, 'desc')->textarea(['rows' => 6]) ?>
+
+    <?= $form->field($model, 'images')->widget(FileInput::class, [
+        'name' => 'attachment_53',
+        'pluginOptions' => [
+            'showCaption' => false,
+            'showRemove' => false,
+            'showUpload' => false,
+            'browseClass' => 'btn btn-primary btn-block',
+            'browseIcon' => '<i class="fas fa-camera"></i> ',
+            'browseLabel' => 'Select Photo'
+        ],
+        'options' => ['accept' => 'image/*']
+    ]) ?>
+
+
 
 
     <div class="form-group">
