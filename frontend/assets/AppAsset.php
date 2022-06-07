@@ -16,6 +16,7 @@ class AppAsset extends AssetBundle
         'css/light.css',
         'css/reset.css',
         'css/style.css',
+        'css/owl.carousel.min.css',
         'Varsity/assets/css/font-awesome.css',
         'Varsity/assets/css/bootstrap.css',
         'Varsity/assets/css/slick.css',
@@ -32,6 +33,7 @@ class AppAsset extends AssetBundle
         'Varsity/assets/js/jquery.mixitup.js',
         'Varsity/assets/js/custom.js',
         'Varsity/assets/js/jquery.fancybox.pack.js',
+        'css/owl.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
