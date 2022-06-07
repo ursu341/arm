@@ -48,7 +48,11 @@ $data = \yii\helpers\ArrayHelper::map($center, 'id', 'name_uz');
                 <?= $form->field($model, 'pochta')->textInput(['maxlength' => true]) ?>
             </div>
             <div class="col-md-4">
-                <?= $form->field($model, 'tel')->textInput(['maxlength' => true]) ?>
+                <?= $form->field($model, 'tel')->widget(\yii\widgets\MaskedInput::class, [
+                        'mask' => '+\9\9\8 (99) 999-99-99',
+                    ]
+
+                ) ?>
             </div>
             <div class="col-md-4">
                 <?= $form->field($model, 'bulim_id')->widget(\kartik\select2\Select2::classname(), [

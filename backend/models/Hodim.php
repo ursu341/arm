@@ -48,6 +48,7 @@ class Hodim extends \yii\db\ActiveRecord
             [['fio_uz', 'lavozim_uz', 'pochta', 'tel', 'bulim_id', 'fio_ru', 'fio_en', 'lavozim_ru', 'lavozim_en', 'malumoti_uz', 'malumoti_ru', 'malumoti_en'], 'required'],
             [['bulim_id','lavozim'], 'integer'],
             [['img', 'fio_uz', 'lavozim_uz', 'pochta', 'tel', 'fio_ru', 'fio_en', 'lavozim_ru', 'lavozim_en', 'malumoti_uz', 'malumoti_ru', 'malumoti_en'], 'string', 'max' => 255],
+            ['pochta','email']
         ];
     }
 
