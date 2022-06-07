@@ -73,15 +73,6 @@ use yii\widgets\ActiveForm;
                 <?= Html::submitButton('Saqlash', ['class' => 'btn btn-success']) ?>
             </div>
         </div>
+        <?php ActiveForm::end(); ?>
     </div>
-</div>
-
-
-
-
-
-
-
-<?php ActiveForm::end(); ?>
-
 </div>
