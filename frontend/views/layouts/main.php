@@ -148,7 +148,7 @@ AppAsset::register($this);
                                 <li><a href="<?= Url::to(['/site/telegram']) ?>">Telegram kanallar</a></li>
                             </ul>
                         </li>
-                        <li><a href="http://armat.urdu.uz/"><img src="/frontend/web/arm.PNG" alt="logo" width="180"
+                        <li><a href="http://armat.urdu.uz/"><img src="/arm.PNG" alt="logo" width="180"
                                                                  height="30"></a></li>
                         <li><a href="http://10.10.10.242/">Elektron kutubxona</a></li>
                     </ul>
@@ -237,6 +237,7 @@ AppAsset::register($this);
             <div class="row">
                 <div class="col-md-6" style="color: white">
                     Copyright UrSU ©
+                    <!--      QalandarDev   https://github.com/QalandarDev -->
                     <script>document.write(new Date().getFullYear());</script>
                 </div>
                 <div class="col-md-6" style="text-align: end">
@@ -263,7 +264,7 @@ AppAsset::register($this);
                         top_r += "&js=" + top_js + "";
                         document.write('<a href="http://www.uz/rus/toprating/cmd/stat/id/29603" target=_top></a>')
                     </script>
-<!--                    <a href="https://linktr.ee/QalandarDev">Powered by QalandarDev</a>-->
+                    <!--                    <a href="https://linktr.ee/QalandarDev">Powered by QalandarDev</a>-->
                     <a href="http://www.uz/rus/toprating/cmd/stat/id/29603" target="_top"></a>
                     <a href="http://www.uz/rus/toprating/cmd/stat/id/29603" target="_top"><img
                                 src="https://www.uz/plugins/top_rating/count/nojs_cnt.png?id=29603&amp;pg=http%3A//urdu.uz&amp;col=0063AF&amp;t=ffffff&amp;p=DD7900"
